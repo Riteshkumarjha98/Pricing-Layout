@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Layout</title>
+    <style>
+          h1 {
+        text-align: center;
+        color: #f84364;
+    }   
+      
+
+      #container {
+        width: 60%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows:repeat(1,300px);
+        gap: 40px;
+        height: 500px;
+        margin-top: 50px;
+    
+      }
+
+      #container > div {
+        display: grid;
+        cursor: pointer;
+        justify-content: baseline;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+      
+
+      #container > div > div {
+        margin-left: 20px;
+      }
+
+      button {
+        border: 1px solid blue;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        color: darkblue;
+        width: 150px;
+        height: 40px;
+        font-weight: bold;
+      }
+     p1{
+         text-align: center;
+         margin-top: 15px;
+         font-weight: bold;
+        
+     }
+
+     h2{
+         text-align: center;
+         margin-bottom: 10px;
+         font-weight: bold;
+        
+     }
+
+     p2{
+         text-align: center;
+         font-size: xx-small;
+         
+         
+         
+     }
+     
+     p{ 
+       text-align: center;
+        font-weight: lighter;
+       
+       
+        
+     }
+     div>div>h2{
+         color: green;
+     }
+
+     .orange{
+         color: orangered;
+     }
+     .blue{
+         color: rgb(64, 64, 180);
+     }
+
+     
+      /* Medium screens */
+      @media only screen and (min-width: 450px) and (max-width: 750px) {
+       
+        
+        #container > div {
+          flex-direction: column;
+        }
+
+        #container {
+            grid-template-rows:repeat(1,300px);
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        #container > div {
+          padding: 20px;
+        }
+        p {
+          text-align: center;
+        }
+      
+    }
+   
+        /* small screens */
+        @media only screen and (min-width: 70px) and (max-width: 450px) {
+        
+        #container > div {
+          flex-direction: column;
+        }
+
+        #container {
+          grid-template-rows: auto;
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        #container > div {
+          padding: 20px;
+        }
+        p {
+       
+       align-items: center;
+    
+       
+        }
+     
+          
+        
+      }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Choosea plan that right for <br> your business</h1>
+    <p>we collect reviews from  users so you
+         can get an honest opinion of what an <br>
+    experience with our website are reality that!
+    </p>
+    <div id="container">
+        <div>
+        <p1>Starter Plan</p1>
+        <h2>Free</h2>
+        <p2>Per month</p2>
+        <p>we collect reviews from our
+          users so you can get an honest 
+          opinion of what an  experience
+           with our website.</p>
+           <center>  <button>Start Now</button></center>
+        </div>
+        <div>
+            <p1>Business Plan</p1>
+            <h2 class="orange">$39.00</h2>
+            <p2>Per month</p2>
+            <p>we collect reviews from users so you can get an honest opinion of what an 
+                experience with our website.</p>
+                <center>  <button style="background-color:blue ;">Start Now</button></center>
+
+        </div>
+        <div>
+            <p1>Premium Plan</p1>
+            <h2 class="blue">$59.00</h2>
+            <p2>Per month</p2>
+            <p>we collect reviews from users so you can get an honest opinion of what an 
+                experience with our website.</p>
+           <center>  <button>Start Now</button></center>
+        </div>
+    </div>
+</body>
+</html>
